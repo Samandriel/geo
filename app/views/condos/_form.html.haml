@@ -1,0 +1,50 @@
+= form_for(@condo) do |f|
+  - if @condo.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@condo.errors.count, "error")
+        prohibited this condo from being saved:
+      %ul
+        - @condo.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :codo_name
+    %br/
+    = f.text_field :codo_name
+  .field
+    = f.label :address
+    %br/
+    = f.text_field :address
+  .field
+    = f.label :street
+    %br/
+    = f.text_field :street
+  .field
+    = f.label :district
+    %br/
+    = f.text_field :district
+  .field
+    = f.label :city
+    %br/
+    = f.text_field :city
+  .field
+    = f.label :country
+    %br/
+    = f.text_field :country
+  .field
+    = f.label :zip_code
+    %br/
+    = f.text_field :zip_code
+  .field
+    = f.label :latitude
+    %br/
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    %br/
+    = f.text_field :longitude
+
+    = render 'condos/map'
+
+  .actions
+    = f.submit

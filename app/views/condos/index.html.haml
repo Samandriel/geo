@@ -1,0 +1,31 @@
+%h1 Listing condos
+%table
+  %thead
+    %tr
+      %th Codo name
+      %th Address
+      %th Street
+      %th District
+      %th City
+      %th Country
+      %th Zip code
+      %th Latitude
+      %th Longitude
+      %th{:colspan => "3"}
+  %tbody
+    - @condos.each do |condo|
+      %tr
+        %td= condo.codo_name
+        %td= condo.address
+        %td= condo.street
+        %td= condo.district
+        %td= condo.city
+        %td= condo.country
+        %td= condo.zip_code
+        %td= condo.latitude
+        %td= condo.longitude
+        %td= link_to 'Show', condo
+        %td= link_to 'Edit', edit_condo_path(condo)
+        %td= link_to 'Destroy', condo, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Condo', new_condo_path

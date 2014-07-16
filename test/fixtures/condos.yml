@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codo_name: MyString
+  address: MyString
+  street: MyString
+  district: MyString
+  city: MyString
+  country: MyString
+  zip_code: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  codo_name: MyString
+  address: MyString
+  street: MyString
+  district: MyString
+  city: MyString
+  country: MyString
+  zip_code: MyString
+  latitude: 1.5
+  longitude: 1.5

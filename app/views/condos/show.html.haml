@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %strong Codo name:
+  = @condo.codo_name
+%p
+  %strong Address:
+  = @condo.address
+%p
+  %strong Street:
+  = @condo.street
+%p
+  %strong District:
+  = @condo.district
+%p
+  %strong City:
+  = @condo.city
+%p
+  %strong Country:
+  = @condo.country
+%p
+  %strong Zip code:
+  = @condo.zip_code
+%p
+  %strong Latitude:
+  = @condo.latitude
+%p
+  %strong Longitude:
+  = @condo.longitude
+= link_to 'Edit', edit_condo_path(@condo)
+|
+\#{link_to 'Back', condos_path}
