@@ -10,6 +10,10 @@ class CondosController < ApplicationController
   # GET /condos/1
   # GET /condos/1.json
   def show
+    @hash = Gmaps4rails.build_markers(@condo) do |condo, marker|
+      marker.lat condo.latitude
+      marker.lng condo.longitude
+    end
   end
 
   # GET /condos/new
@@ -71,4 +75,5 @@ class CondosController < ApplicationController
     def condo_params
       params.require(:condo).permit(:codo_name, :address, :street, :district, :city, :country, :zip_code, :latitude, :longitude)
     end
+
 end
